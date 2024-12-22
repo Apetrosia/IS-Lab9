@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -119,13 +120,58 @@ namespace ClipsFormsExample
             clips.LoadFromString(codeBox.Text);
             clips.Reset();
 
+            if (checkedListBox1.GetItemChecked(0))
+                clips.Eval($"(assert (input-question (name \"{checkedListBox1.Items[0].ToString().Trim()}\") (certainty {((float)TAScert.Value).ToString().Replace(",", ".").Trim()})))");
+            if (checkedListBox1.GetItemChecked(1))
+                clips.Eval($"(assert (input-question (name \"{checkedListBox1.Items[1]}\") (certainty {((float)TAWcert.Value).ToString().Replace(",", ".")})))");
+            if (checkedListBox1.GetItemChecked(2))
+                clips.Eval($"(assert (input-question (name \"{checkedListBox1.Items[2]}\") (certainty {((float)TABcert.Value).ToString().Replace(",", ".")})))");
+
+            if (checkedListBox2.GetItemChecked(0))
+                clips.Eval($"(assert (input-question (name \"{checkedListBox2.Items[0]}\") (certainty {((float)FSScert.Value).ToString().Replace(",", ".")})))");
+            else if (checkedListBox2.GetItemChecked(1))
+                clips.Eval($"(assert (input-question (name \"{checkedListBox2.Items[1]}\") (certainty {((float)FSFcert.Value).ToString().Replace(",", ".")})))");
+            else if (checkedListBox2.GetItemChecked(2))
+                clips.Eval($"(assert (input-question (name \"{checkedListBox2.Items[2]}\") (certainty {((float)FSCcert.Value).ToString().Replace(",", ".")})))");
+
+            if (checkedListBox3.GetItemChecked(0))
+                clips.Eval($"(assert (input-question (name \"{checkedListBox3.Items[0]}\") (certainty {((float)CRcert.Value).ToString().Replace(",", ".")})))");
+            if (checkedListBox3.GetItemChecked(1))
+                clips.Eval($"(assert (input-question (name \"{checkedListBox3.Items[1]}\") (certainty {((float)CMcert.Value).ToString().Replace(",", ".")})))");
+            if (checkedListBox3.GetItemChecked(2))
+                clips.Eval($"(assert (input-question (name \"{checkedListBox3.Items[2]}\") (certainty {((float)COcert.Value).ToString().Replace(",", ".")})))");
+
+            if (checkedListBox4.GetItemChecked(0))
+                clips.Eval($"(assert (input-question (name \"{checkedListBox4.Items[0]}\") (certainty {((float)CGNcert.Value).ToString().Replace(",", ".")})))");
+            if (checkedListBox4.GetItemChecked(1))
+                clips.Eval($"(assert (input-question (name \"{checkedListBox4.Items[1]}\") (certainty {((float)CGRcert.Value).ToString().Replace(",", ".")})))");
+            if (checkedListBox4.GetItemChecked(2))
+                clips.Eval($"(assert (input-question (name \"{checkedListBox4.Items[2]}\") (certainty {((float)CGOcert.Value).ToString().Replace(",", ".")})))");
+
+            if (checkedListBox5.GetItemChecked(0))
+                clips.Eval($"(assert (input-question (name \"{checkedListBox5.Items[0]}\") (certainty {((float)TCNcert.Value).ToString().Replace(",", ".")})))");
+            if (checkedListBox5.GetItemChecked(1))
+                clips.Eval($"(assert (input-question (name \"{checkedListBox5.Items[1]}\") (certainty {((float)TCRcert.Value).ToString().Replace(",", ".")})))");
+            if (checkedListBox5.GetItemChecked(2))
+                clips.Eval($"(assert (input-question (name \"{checkedListBox5.Items[2]}\") (certainty {((float)TCOcert.Value).ToString().Replace(",", ".")})))");
+
+            if (checkedListBox6.GetItemChecked(0))
+                clips.Eval($"(assert (input-question (name \"{checkedListBox6.Items[0]}\") (certainty {((float)TNNcert.Value).ToString().Replace(",", ".")})))");
+            if (checkedListBox6.GetItemChecked(1))
+                clips.Eval($"(assert (input-question (name \"{checkedListBox6.Items[1]}\") (certainty {((float)TNRcert.Value).ToString().Replace(",", ".")})))");
+            if (checkedListBox6.GetItemChecked(2))
+                clips.Eval($"(assert (input-question (name \"{checkedListBox6.Items[2]}\") (certainty {((float)TNOcert.Value).ToString().Replace(",", ".")})))");
+
+            /*
             clips.Eval($"(assert (input-question (name \"{checkedListBox1.Items[checkedListBox1.CheckedIndices[0]]}\")))");
             clips.Eval($"(assert (input-question (name \"{checkedListBox2.Items[checkedListBox2.CheckedIndices[0]]}\")))");
             clips.Eval($"(assert (input-question (name \"{checkedListBox3.Items[checkedListBox3.CheckedIndices[0]]}\")))");
             clips.Eval($"(assert (input-question (name \"{checkedListBox4.Items[checkedListBox4.CheckedIndices[0]]}\")))");
             clips.Eval($"(assert (input-question (name \"{checkedListBox5.Items[checkedListBox5.CheckedIndices[0]]}\")))");
             clips.Eval($"(assert (input-question (name \"{checkedListBox6.Items[checkedListBox6.CheckedIndices[0]]}\")))");
+            */
             clips.Run();
+
             HandleResponse();
         }
 
@@ -179,21 +225,22 @@ namespace ClipsFormsExample
         {
             var listBox = sender as CheckedListBox;
 
-            switch (e.Index)
-            {
-                case 0:
-                    listBox.SetItemChecked(1, false);
-                    listBox.SetItemChecked(2, false);
-                    break;
-                case 1:
-                    listBox.SetItemChecked(0, false);
-                    listBox.SetItemChecked(2, false);
-                    break;
-                case 2:
-                    listBox.SetItemChecked(0, false);
-                    listBox.SetItemChecked(1, false);
-                    break;
-            }
+            if (listBox.Name == "checkedListBox2")
+                switch (e.Index)
+                {
+                    case 0:
+                        listBox.SetItemChecked(1, false);
+                        listBox.SetItemChecked(2, false);
+                        break;
+                    case 1:
+                        listBox.SetItemChecked(0, false);
+                        listBox.SetItemChecked(2, false);
+                        break;
+                    case 2:
+                        listBox.SetItemChecked(0, false);
+                        listBox.SetItemChecked(1, false);
+                        break;
+                }
         }
     }
 }
