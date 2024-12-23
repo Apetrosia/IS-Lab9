@@ -287,6 +287,7 @@
 
 
 (defrule rule1
+(declare (salience 2))
 (fact (name "бизнесмен") (certainty ?cTAB))
 (test (> (abs ?cTAB) 0.4))
 ?f <- (fact (name "коробка передач АКПП") (certainty ?cf_))
@@ -295,11 +296,12 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cTAB) 1.0) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "бизнесмен -> коробка передач АКПП" " (коробка передач АКПП " ?cnew ")"))))
+(assert (sendmessage (str-cat "бизнесмен -> коробка передач АКПП" " (" ?cnew ")"))))
 
 
 
 (defrule rule2
+(declare (salience 2))
 (fact (name "студент") (certainty ?cTAS))
 (test (> (abs ?cTAS) 0.4))
 ?f <- (fact (name "коробка передач МКПП") (certainty ?cf_))
@@ -308,11 +310,12 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cTAS) 0.7) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "студент -> коробка передач МКПП" " (коробка передач МКПП " ?cnew ")"))))
+(assert (sendmessage (str-cat "студент -> коробка передач МКПП"  " (" ?cnew ")"))))
 
 
 
 (defrule rule3
+(declare (salience 2))
 (fact (name "студент") (certainty ?cTAS))
 (test (> (abs ?cTAS) 0.4))
 ?f <- (fact (name "коробка передач АКПП") (certainty ?cf_))
@@ -321,11 +324,12 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cTAS) 0.3) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "студент -> коробка передач АКПП" " (коробка передач АКПП " ?cnew ")"))))
+(assert (sendmessage (str-cat "студент -> коробка передач АКПП"  " (" ?cnew ")"))))
 
 
 
 (defrule rule4
+(declare (salience 2))
 (fact (name "работник") (certainty ?cTAW))
 (test (> (abs ?cTAW) 0.4))
 ?f <- (fact (name "коробка передач МКПП") (certainty ?cf_))
@@ -334,11 +338,12 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cTAW) 0.8) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "работник -> коробка передач МКПП" " (коробка передач МКПП " ?cnew ")"))))
+(assert (sendmessage (str-cat "работник -> коробка передач МКПП"  " (" ?cnew ")"))))
 
 
 
 (defrule rule5
+(declare (salience 2))
 (fact (name "работник") (certainty ?cTAW))
 (test (> (abs ?cTAW) 0.4))
 ?f <- (fact (name "коробка передач АКПП") (certainty ?cf_))
@@ -347,12 +352,13 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cTAW) 0.8) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "работник -> коробка передач АКПП" " (коробка передач АКПП " ?cnew ")"))))
+(assert (sendmessage (str-cat "работник -> коробка передач АКПП"  " (" ?cnew ")"))))
 
 
 
 
 (defrule rule8
+(declare (salience 2))
 (fact (name "бизнесмен") (certainty ?cTAB))
 (test (> (abs ?cTAB) 0.4))
 ?f <- (fact (name "цена высокая") (certainty ?cf_))
@@ -361,11 +367,12 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cTAB) 0.9) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "бизнесмен -> цена высокая" " (цена высокая " ?cnew ")"))))
+(assert (sendmessage (str-cat "бизнесмен -> цена высокая"  " (" ?cnew ")"))))
 
 
 
 (defrule rule9
+(declare (salience 2))
 (fact (name "бизнесмен") (certainty ?cTAB))
 (test (> (abs ?cTAB) 0.4))
 ?f <- (fact (name "цена средняя") (certainty ?cf_))
@@ -374,11 +381,12 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cTAB) 0.1) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "бизнесмен -> цена средняя" " (цена средняя " ?cnew ")"))))
+(assert (sendmessage (str-cat "бизнесмен -> цена средняя"  " (" ?cnew ")"))))
 
 
 
 (defrule rule10
+(declare (salience 2))
 (fact (name "работник") (certainty ?cTAW))
 (test (> (abs ?cTAW) 0.4))
 ?f <- (fact (name "цена средняя") (certainty ?cf_))
@@ -387,11 +395,12 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cTAW) 0.8) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "работник -> цена средняя" " (цена средняя " ?cnew ")"))))
+(assert (sendmessage (str-cat "работник -> цена средняя"  " (" ?cnew ")"))))
 
 
 
 (defrule rule11
+(declare (salience 2))
 (fact (name "работник") (certainty ?cTAW))
 (test (> (abs ?cTAW) 0.4))
 ?f <- (fact (name "цена высокая") (certainty ?cf_))
@@ -400,11 +409,12 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cTAW) 0.2) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "работник -> цена высокая" " (цена высокая " ?cnew ")"))))
+(assert (sendmessage (str-cat "работник -> цена высокая"  " (" ?cnew ")"))))
 
 
 
 (defrule rule12
+(declare (salience 2))
 (fact (name "студент") (certainty ?cTAS))
 (test (> (abs ?cTAS) 0.4))
 ?f <- (fact (name "цена низкая") (certainty ?cf_))
@@ -413,11 +423,12 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cTAS) 0.9) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "студент -> цена низкая" " (цена низкая " ?cnew ")"))))
+(assert (sendmessage (str-cat "студент -> цена низкая"  " (" ?cnew ")"))))
 
 
 
 (defrule rule13
+(declare (salience 2))
 (fact (name "студент") (certainty ?cTAS))
 (test (> (abs ?cTAS) 0.4))
 ?f <- (fact (name "цена средняя") (certainty ?cf_))
@@ -426,12 +437,13 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cTAS) 0.1) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "студент -> цена средняя" " (цена средняя " ?cnew ")"))))
+(assert (sendmessage (str-cat "студент -> цена средняя"  " (" ?cnew ")"))))
 
 
 
 
 (defrule rule16
+(declare (salience 2))
 (fact (name "не еду на природу") (certainty ?cTNN))
 (test (> (abs ?cTNN) 0.4))
 ?f <- (fact (name "привод передний") (certainty ?cf_))
@@ -440,11 +452,12 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cTNN) 1.0) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "не еду на природу -> привод передний" " (привод передний " ?cnew ")"))))
+(assert (sendmessage (str-cat "не еду на природу -> привод передний"  " (" ?cnew ")"))))
 
 
 
 (defrule rule17
+(declare (salience 2))
 (fact (name "иногда еду на природу") (certainty ?cTNR))
 (test (> (abs ?cTNR) 0.4))
 ?f <- (fact (name "привод передний") (certainty ?cf_))
@@ -453,11 +466,12 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cTNR) 1.0) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "иногда еду на природу -> привод передний" " (привод передний " ?cnew ")"))))
+(assert (sendmessage (str-cat "иногда еду на природу -> привод передний"  " (" ?cnew ")"))))
 
 
 
 (defrule rule18
+(declare (salience 2))
 (fact (name "иногда еду на природу") (certainty ?cTNR))
 (test (> (abs ?cTNR) 0.4))
 ?f <- (fact (name "привод задний") (certainty ?cf_))
@@ -466,11 +480,12 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cTNR) 1.0) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "иногда еду на природу -> привод задний" " (привод задний " ?cnew ")"))))
+(assert (sendmessage (str-cat "иногда еду на природу -> привод задний"  " (" ?cnew ")"))))
 
 
 
 (defrule rule19
+(declare (salience 2))
 (fact (name "не еду на природу") (certainty ?cTNN))
 (test (> (abs ?cTNN) 0.4))
 ?f <- (fact (name "привод задний") (certainty ?cf_))
@@ -479,11 +494,12 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cTNN) 1.0) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "не еду на природу -> привод задний" " (привод задний " ?cnew ")"))))
+(assert (sendmessage (str-cat "не еду на природу -> привод задний"  " (" ?cnew ")"))))
 
 
 
 (defrule rule20
+(declare (salience 2))
 (fact (name "часто еду на природу") (certainty ?cTNO))
 (test (> (abs ?cTNO) 0.4))
 ?f <- (fact (name "привод полный") (certainty ?cf_))
@@ -492,11 +508,12 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cTNO) 1.0) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "часто еду на природу -> привод полный" " (привод полный " ?cnew ")"))))
+(assert (sendmessage (str-cat "часто еду на природу -> привод полный"  " (" ?cnew ")"))))
 
 
 
 (defrule rule21
+(declare (salience 2))
 (fact (name "часто еду на природу") (certainty ?cTNO))
 (test (> (abs ?cTNO) 0.4))
 ?f <- (fact (name "привод полный") (certainty ?cf_))
@@ -505,11 +522,12 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cTNO) 1.0) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "часто еду на природу -> привод полный" " (привод полный " ?cnew ")"))))
+(assert (sendmessage (str-cat "часто еду на природу -> привод полный"  " (" ?cnew ")"))))
 
 
 
 (defrule rule22
+(declare (salience 2))
 (fact (name "часто еду на природу") (certainty ?cTNO))
 (test (> (abs ?cTNO) 0.4))
 ?f <- (fact (name "привод полный") (certainty ?cf_))
@@ -518,12 +536,13 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cTNO) 1.0) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "часто еду на природу -> привод полный" " (привод полный " ?cnew ")"))))
+(assert (sendmessage (str-cat "часто еду на природу -> привод полный"  " (" ?cnew ")"))))
 
 
 
 
 (defrule rule25
+(declare (salience 3))
 (fact (name "холост") (certainty ?cFSS))
 (test (> (abs ?cFSS) 0.4))
 ?f <- (fact (name "количество дверей две") (certainty ?cf_))
@@ -532,11 +551,12 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cFSS) 0.9) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "холост -> количество дверей две" " (количество дверей две " ?cnew ")"))))
+(assert (sendmessage (str-cat "холост -> количество дверей две"  " (" ?cnew ")"))))
 
 
 
 (defrule rule26
+(declare (salience 3))
 (fact (name "мало общения") (certainty ?cCR))
 (test (> (abs ?cCR) 0.4))
 ?f <- (fact (name "количество дверей две") (certainty ?cf_))
@@ -545,11 +565,12 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cCR) 0.9) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "мало общения -> количество дверей две" " (количество дверей две " ?cnew ")"))))
+(assert (sendmessage (str-cat "мало общения -> количество дверей две"  " (" ?cnew ")"))))
 
 
 
 (defrule rule27
+(declare (salience 3))
 (fact (name "средне общения") (certainty ?cCM))
 (test (> (abs ?cCM) 0.4))
 ?f <- (fact (name "количество дверей две") (certainty ?cf_))
@@ -558,11 +579,12 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cCM) 0.9) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "средне общения -> количество дверей две" " (количество дверей две " ?cnew ")"))))
+(assert (sendmessage (str-cat "средне общения -> количество дверей две"  " (" ?cnew ")"))))
 
 
 
 (defrule rule28
+(declare (salience 3))
 (fact (name "холост") (certainty ?cFSS))
 (test (> (abs ?cFSS) 0.4))
 ?f <- (fact (name "количество дверей три") (certainty ?cf_))
@@ -571,24 +593,12 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cFSS) 0.9) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "холост -> количество дверей три" " (количество дверей три " ?cnew ")"))))
-
-
-
-(defrule rule29
-(fact (name "холост") (certainty ?cFSS))
-(test (> (abs ?cFSS) 0.4))
-?f <- (fact (name "количество дверей две") (certainty ?cf_))
-?tk <- (token (name "rule29"))
-=>
-(retract ?tk)
-(bind ?cnew (combine (* (min ?cFSS) 0.8) ?cf_))
-(modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "холост -> количество дверей две" " (количество дверей две " ?cnew ")"))))
+(assert (sendmessage (str-cat "холост -> количество дверей три"  " (" ?cnew ")"))))
 
 
 
 (defrule rule30
+(declare (salience 3))
 (fact (name "средне общения") (certainty ?cCM))
 (test (> (abs ?cCM) 0.4))
 ?f <- (fact (name "количество дверей три") (certainty ?cf_))
@@ -597,11 +607,12 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cCM) 0.8) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "средне общения -> количество дверей три" " (количество дверей три " ?cnew ")"))))
+(assert (sendmessage (str-cat "средне общения -> количество дверей три"  " (" ?cnew ")"))))
 
 
 
 (defrule rule31
+(declare (salience 3))
 (fact (name "средне общения") (certainty ?cCM))
 (test (> (abs ?cCM) 0.4))
 ?f <- (fact (name "количество дверей две") (certainty ?cf_))
@@ -610,11 +621,12 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cCM) 0.7) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "средне общения -> количество дверей две" " (количество дверей две " ?cnew ")"))))
+(assert (sendmessage (str-cat "средне общения -> количество дверей две"  " (" ?cnew ")"))))
 
 
 
 (defrule rule32
+(declare (salience 3))
 (fact (name "мало общения") (certainty ?cCR))
 (test (> (abs ?cCR) 0.4))
 ?f <- (fact (name "количество дверей три") (certainty ?cf_))
@@ -623,24 +635,12 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cCR) 0.7) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "мало общения -> количество дверей три" " (количество дверей три " ?cnew ")"))))
-
-
-
-(defrule rule33
-(fact (name "мало общения") (certainty ?cCR))
-(test (> (abs ?cCR) 0.4))
-?f <- (fact (name "количество дверей две") (certainty ?cf_))
-?tk <- (token (name "rule33"))
-=>
-(retract ?tk)
-(bind ?cnew (combine (* (min ?cCR) 0.9) ?cf_))
-(modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "мало общения -> количество дверей две" " (количество дверей две " ?cnew ")"))))
+(assert (sendmessage (str-cat "мало общения -> количество дверей три"  " (" ?cnew ")"))))
 
 
 
 (defrule rule34
+(declare (salience 3))
 (fact (name "есть семья") (certainty ?cFSF))
 (test (> (abs ?cFSF) 0.4))
 ?f <- (fact (name "количество дверей четыре") (certainty ?cf_))
@@ -649,11 +649,12 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cFSF) 0.9) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "есть семья -> количество дверей четыре" " (количество дверей четыре " ?cnew ")"))))
+(assert (sendmessage (str-cat "есть семья -> количество дверей четыре"  " (" ?cnew ")"))))
 
 
 
 (defrule rule35
+(declare (salience 3))
 (fact (name "есть дети") (certainty ?cFSC))
 (test (> (abs ?cFSC) 0.4))
 ?f <- (fact (name "количество дверей четыре") (certainty ?cf_))
@@ -662,11 +663,12 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cFSC) 1.0) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "есть дети -> количество дверей четыре" " (количество дверей четыре " ?cnew ")"))))
+(assert (sendmessage (str-cat "есть дети -> количество дверей четыре"  " (" ?cnew ")"))))
 
 
 
 (defrule rule36
+(declare (salience 3))
 (fact (name "средне общения") (certainty ?cCM))
 (test (> (abs ?cCM) 0.4))
 ?f <- (fact (name "количество дверей четыре") (certainty ?cf_))
@@ -675,11 +677,12 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cCM) 0.9) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "средне общения -> количество дверей четыре" " (количество дверей четыре " ?cnew ")"))))
+(assert (sendmessage (str-cat "средне общения -> количество дверей четыре"  " (" ?cnew ")"))))
 
 
 
 (defrule rule37
+(declare (salience 3))
 (fact (name "много общения") (certainty ?cCO))
 (test (> (abs ?cCO) 0.4))
 ?f <- (fact (name "количество дверей четыре") (certainty ?cf_))
@@ -688,11 +691,12 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cCO) 0.95) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "много общения -> количество дверей четыре" " (количество дверей четыре " ?cnew ")"))))
+(assert (sendmessage (str-cat "много общения -> количество дверей четыре"  " (" ?cnew ")"))))
 
 
 
 (defrule rule38
+(declare (salience 3))
 (fact (name "есть семья") (certainty ?cFSF))
 (test (> (abs ?cFSF) 0.4))
 ?f <- (fact (name "количество дверей пять") (certainty ?cf_))
@@ -701,11 +705,12 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cFSF) 1.0) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "есть семья -> количество дверей пять" " (количество дверей пять " ?cnew ")"))))
+(assert (sendmessage (str-cat "есть семья -> количество дверей пять"  " (" ?cnew ")"))))
 
 
 
 (defrule rule39
+(declare (salience 3))
 (fact (name "много общения") (certainty ?cCO))
 (test (> (abs ?cCO) 0.4))
 ?f <- (fact (name "количество дверей пять") (certainty ?cf_))
@@ -714,11 +719,12 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cCO) 1.0) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "много общения -> количество дверей пять" " (количество дверей пять " ?cnew ")"))))
+(assert (sendmessage (str-cat "много общения -> количество дверей пять"  " (" ?cnew ")"))))
 
 
 
 (defrule rule40
+(declare (salience 3))
 (fact (name "средне общения") (certainty ?cCM))
 (test (> (abs ?cCM) 0.4))
 ?f <- (fact (name "количество дверей пять") (certainty ?cf_))
@@ -727,12 +733,13 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cCM) 0.9) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "средне общения -> количество дверей пять" " (количество дверей пять " ?cnew ")"))))
+(assert (sendmessage (str-cat "средне общения -> количество дверей пять"  " (" ?cnew ")"))))
 
 
 
 
 (defrule rule43
+(declare (salience 4))
 (fact (name "цена высокая") (certainty ?cHP))
 (test (> (abs ?cHP) 0.4))
 (fact (name "количество дверей четыре") (certainty ?cFRD))
@@ -743,11 +750,12 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cHP ?cFRD) 1.0) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "цена высокая, количество дверей четыре -> кузов SUV" " (кузов SUV " ?cnew ")"))))
+(assert (sendmessage (str-cat "цена высокая, количество дверей четыре -> кузов SUV"  " (" ?cnew ")"))))
 
 
 
 (defrule rule44
+(declare (salience 4))
 (fact (name "цена высокая") (certainty ?cHP))
 (test (> (abs ?cHP) 0.4))
 (fact (name "количество дверей пять") (certainty ?cFD))
@@ -758,11 +766,12 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cHP ?cFD) 1.0) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "цена высокая, количество дверей пять -> кузов SUV" " (кузов SUV " ?cnew ")"))))
+(assert (sendmessage (str-cat "цена высокая, количество дверей пять -> кузов SUV"  " (" ?cnew ")"))))
 
 
 
 (defrule rule45
+(declare (salience 4))
 (fact (name "цена высокая") (certainty ?cHP))
 (test (> (abs ?cHP) 0.4))
 (fact (name "количество дверей три") (certainty ?cTHD))
@@ -773,11 +782,12 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cHP ?cTHD) 1.0) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "цена высокая, количество дверей три -> кузов купе" " (кузов купе " ?cnew ")"))))
+(assert (sendmessage (str-cat "цена высокая, количество дверей три -> кузов купе"  " (" ?cnew ")"))))
 
 
 
 (defrule rule46
+(declare (salience 4))
 (fact (name "цена высокая") (certainty ?cHP))
 (test (> (abs ?cHP) 0.4))
 (fact (name "количество дверей две") (certainty ?cTWD))
@@ -788,11 +798,12 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cHP ?cTWD) 1.0) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "цена высокая, количество дверей две -> кузов купе" " (кузов купе " ?cnew ")"))))
+(assert (sendmessage (str-cat "цена высокая, количество дверей две -> кузов купе"  " (" ?cnew ")"))))
 
 
 
 (defrule rule47
+(declare (salience 4))
 (fact (name "цена средняя") (certainty ?cMP))
 (test (> (abs ?cMP) 0.4))
 (fact (name "иногда везу грузы") (certainty ?cCGR))
@@ -803,11 +814,12 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cMP ?cCGR) 0.8) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "цена средняя, иногда везу грузы -> кузов хетчбек" " (кузов хетчбек " ?cnew ")"))))
+(assert (sendmessage (str-cat "цена средняя, иногда везу грузы -> кузов хетчбек"  " (" ?cnew ")"))))
 
 
 
 (defrule rule48
+(declare (salience 4))
 (fact (name "цена низкая") (certainty ?cLP))
 (test (> (abs ?cLP) 0.4))
 (fact (name "иногда везу грузы") (certainty ?cCGR))
@@ -818,11 +830,12 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cLP ?cCGR) 0.7) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "цена низкая, иногда везу грузы -> кузов хетчбек" " (кузов хетчбек " ?cnew ")"))))
+(assert (sendmessage (str-cat "цена низкая, иногда везу грузы -> кузов хетчбек"  " (" ?cnew ")"))))
 
 
 
 (defrule rule49
+(declare (salience 4))
 (fact (name "цена низкая") (certainty ?cLP))
 (test (> (abs ?cLP) 0.4))
 (fact (name "иногда еду загород") (certainty ?cTCR))
@@ -833,11 +846,12 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cLP ?cTCR) 0.7) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "цена низкая, иногда еду загород -> кузов хетчбек" " (кузов хетчбек " ?cnew ")"))))
+(assert (sendmessage (str-cat "цена низкая, иногда еду загород -> кузов хетчбек"  " (" ?cnew ")"))))
 
 
 
 (defrule rule50
+(declare (salience 4))
 (fact (name "цена средняя") (certainty ?cMP))
 (test (> (abs ?cMP) 0.4))
 (fact (name "иногда еду загород") (certainty ?cTCR))
@@ -848,11 +862,12 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cMP ?cTCR) 0.7) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "цена средняя, иногда еду загород -> кузов хетчбек" " (кузов хетчбек " ?cnew ")"))))
+(assert (sendmessage (str-cat "цена средняя, иногда еду загород -> кузов хетчбек"  " (" ?cnew ")"))))
 
 
 
 (defrule rule51
+(declare (salience 4))
 (fact (name "цена средняя") (certainty ?cMP))
 (test (> (abs ?cMP) 0.4))
 (fact (name "не еду загород") (certainty ?cTCN))
@@ -863,11 +878,12 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cMP ?cTCN) 0.95) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "цена средняя, не еду загород -> кузов седан" " (кузов седан " ?cnew ")"))))
+(assert (sendmessage (str-cat "цена средняя, не еду загород -> кузов седан"  " (" ?cnew ")"))))
 
 
 
 (defrule rule52
+(declare (salience 4))
 (fact (name "цена средняя") (certainty ?cMP))
 (test (> (abs ?cMP) 0.4))
 (fact (name "не везу грузы") (certainty ?cCGN))
@@ -878,11 +894,12 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cMP ?cCGN) 0.95) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "цена средняя, не везу грузы -> кузов седан" " (кузов седан " ?cnew ")"))))
+(assert (sendmessage (str-cat "цена средняя, не везу грузы -> кузов седан"  " (" ?cnew ")"))))
 
 
 
 (defrule rule53
+(declare (salience 4))
 (fact (name "цена низкая") (certainty ?cLP))
 (test (> (abs ?cLP) 0.4))
 (fact (name "не везу грузы") (certainty ?cCGN))
@@ -893,11 +910,12 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cLP ?cCGN) 0.95) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "цена низкая, не везу грузы -> кузов седан" " (кузов седан " ?cnew ")"))))
+(assert (sendmessage (str-cat "цена низкая, не везу грузы -> кузов седан"  " (" ?cnew ")"))))
 
 
 
 (defrule rule54
+(declare (salience 4))
 (fact (name "цена низкая") (certainty ?cLP))
 (test (> (abs ?cLP) 0.4))
 (fact (name "не еду загород") (certainty ?cTCN))
@@ -908,11 +926,12 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cLP ?cTCN) 0.95) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "цена низкая, не еду загород -> кузов седан" " (кузов седан " ?cnew ")"))))
+(assert (sendmessage (str-cat "цена низкая, не еду загород -> кузов седан"  " (" ?cnew ")"))))
 
 
 
 (defrule rule55
+(declare (salience 4))
 (fact (name "цена средняя") (certainty ?cMP))
 (test (> (abs ?cMP) 0.4))
 (fact (name "часто везу грузы") (certainty ?cCGO))
@@ -923,11 +942,12 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cMP ?cCGO) 0.99) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "цена средняя, часто везу грузы -> кузов универсал" " (кузов универсал " ?cnew ")"))))
+(assert (sendmessage (str-cat "цена средняя, часто везу грузы -> кузов универсал"  " (" ?cnew ")"))))
 
 
 
 (defrule rule56
+(declare (salience 4))
 (fact (name "цена средняя") (certainty ?cMP))
 (test (> (abs ?cMP) 0.4))
 (fact (name "часто еду загород") (certainty ?cTCO))
@@ -938,11 +958,12 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cMP ?cTCO) 0.99) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "цена средняя, часто еду загород -> кузов универсал" " (кузов универсал " ?cnew ")"))))
+(assert (sendmessage (str-cat "цена средняя, часто еду загород -> кузов универсал"  " (" ?cnew ")"))))
 
 
 
 (defrule rule57
+(declare (salience 4))
 (fact (name "цена низкая") (certainty ?cLP))
 (test (> (abs ?cLP) 0.4))
 (fact (name "часто еду загород") (certainty ?cTCO))
@@ -953,11 +974,12 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cLP ?cTCO) 0.65) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "цена низкая, часто еду загород -> кузов универсал" " (кузов универсал " ?cnew ")"))))
+(assert (sendmessage (str-cat "цена низкая, часто еду загород -> кузов универсал"  " (" ?cnew ")"))))
 
 
 
 (defrule rule58
+(declare (salience 4))
 (fact (name "цена низкая") (certainty ?cLP))
 (test (> (abs ?cLP) 0.4))
 (fact (name "часто везу грузы") (certainty ?cCGO))
@@ -968,12 +990,13 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cLP ?cCGO) 0.65) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "цена низкая, часто везу грузы -> кузов универсал" " (кузов универсал " ?cnew ")"))))
+(assert (sendmessage (str-cat "цена низкая, часто везу грузы -> кузов универсал"  " (" ?cnew ")"))))
 
 
 
 
 (defrule rule61
+(declare (salience 7))
 (fact (name "цена низкая") (certainty ?cLP))
 (test (> (abs ?cLP) 0.4))
 ?f <- (fact (name "класс A (мини") (certainty ?cf_))
@@ -982,11 +1005,12 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cLP) 1.0) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "цена низкая -> класс A (мини" " (класс A (мини " ?cnew ")"))))
+(assert (sendmessage (str-cat "цена низкая -> класс A (мини"  " ((мини " ?cnew ")"))))
 
 
 
 (defrule rule62
+(declare (salience 7))
 (fact (name "цена низкая") (certainty ?cLP))
 (test (> (abs ?cLP) 0.4))
 (fact (name "кузов хетчбек") (certainty ?cBH))
@@ -997,11 +1021,12 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cLP ?cBH) 0.9) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "цена низкая, кузов хетчбек -> класс B (небольшие городские автомобили)" " (класс B (небольшие городские автомобили) " ?cnew ")"))))
+(assert (sendmessage (str-cat "цена низкая, кузов хетчбек -> класс B (небольшие городские автомобили)"  " ((небольшие городские автомобили) " ?cnew ")"))))
 
 
 
 (defrule rule63
+(declare (salience 7))
 (fact (name "цена низкая") (certainty ?cLP))
 (test (> (abs ?cLP) 0.4))
 (fact (name "кузов седан") (certainty ?cBS))
@@ -1012,11 +1037,12 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cLP ?cBS) 0.9) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "цена низкая, кузов седан -> класс B (небольшие городские автомобили)" " (класс B (небольшие городские автомобили) " ?cnew ")"))))
+(assert (sendmessage (str-cat "цена низкая, кузов седан -> класс B (небольшие городские автомобили)"  " ((небольшие городские автомобили) " ?cnew ")"))))
 
 
 
 (defrule rule64
+(declare (salience 7))
 (fact (name "цена средняя") (certainty ?cMP))
 (test (> (abs ?cMP) 0.4))
 (fact (name "кузов хетчбек") (certainty ?cBH))
@@ -1027,11 +1053,12 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cMP ?cBH) 0.9) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "цена средняя, кузов хетчбек -> класс B (небольшие городские автомобили)" " (класс B (небольшие городские автомобили) " ?cnew ")"))))
+(assert (sendmessage (str-cat "цена средняя, кузов хетчбек -> класс B (небольшие городские автомобили)"  " ((небольшие городские автомобили) " ?cnew ")"))))
 
 
 
 (defrule rule65
+(declare (salience 7))
 (fact (name "цена средняя") (certainty ?cMP))
 (test (> (abs ?cMP) 0.4))
 (fact (name "кузов седан") (certainty ?cBS))
@@ -1042,11 +1069,12 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cMP ?cBS) 0.9) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "цена средняя, кузов седан -> класс B (небольшие городские автомобили)" " (класс B (небольшие городские автомобили) " ?cnew ")"))))
+(assert (sendmessage (str-cat "цена средняя, кузов седан -> класс B (небольшие городские автомобили)"  " ((небольшие городские автомобили) " ?cnew ")"))))
 
 
 
 (defrule rule66
+(declare (salience 7))
 (fact (name "цена средняя") (certainty ?cMP))
 (test (> (abs ?cMP) 0.4))
 (fact (name "кузов хетчбек") (certainty ?cBH))
@@ -1059,11 +1087,12 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cMP ?cBH ?cTHD) 0.9) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "цена средняя, кузов хетчбек, количество дверей три -> класс C (низший средний класс или гольф" " (класс C (низший средний класс или гольф " ?cnew ")"))))
+(assert (sendmessage (str-cat "цена средняя, кузов хетчбек, количество дверей три -> класс C (низший средний класс или гольф"  " ((низший средний класс или гольф " ?cnew ")"))))
 
 
 
 (defrule rule67
+(declare (salience 7))
 (fact (name "цена низкая") (certainty ?cLP))
 (test (> (abs ?cLP) 0.4))
 (fact (name "кузов хетчбек") (certainty ?cBH))
@@ -1076,11 +1105,12 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cLP ?cBH ?cTHD) 0.99) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "цена низкая, кузов хетчбек, количество дверей три -> класс C (низший средний класс или гольф" " (класс C (низший средний класс или гольф " ?cnew ")"))))
+(assert (sendmessage (str-cat "цена низкая, кузов хетчбек, количество дверей три -> класс C (низший средний класс или гольф"  " ((низший средний класс или гольф " ?cnew ")"))))
 
 
 
 (defrule rule68
+(declare (salience 7))
 (fact (name "цена средняя") (certainty ?cMP))
 (test (> (abs ?cMP) 0.4))
 (fact (name "кузов седан") (certainty ?cBS))
@@ -1091,11 +1121,12 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cMP ?cBS) 0.8) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "цена средняя, кузов седан -> класс D (полноценный средний класс)" " (класс D (полноценный средний класс) " ?cnew ")"))))
+(assert (sendmessage (str-cat "цена средняя, кузов седан -> класс D (полноценный средний класс)"  " ((полноценный средний класс) " ?cnew ")"))))
 
 
 
 (defrule rule69
+(declare (salience 7))
 (fact (name "цена средняя") (certainty ?cMP))
 (test (> (abs ?cMP) 0.4))
 (fact (name "кузов универсал") (certainty ?cBU))
@@ -1106,11 +1137,12 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cMP ?cBU) 0.99) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "цена средняя, кузов универсал -> класс D (полноценный средний класс)" " (класс D (полноценный средний класс) " ?cnew ")"))))
+(assert (sendmessage (str-cat "цена средняя, кузов универсал -> класс D (полноценный средний класс)"  " ((полноценный средний класс) " ?cnew ")"))))
 
 
 
 (defrule rule70
+(declare (salience 7))
 (fact (name "цена высокая") (certainty ?cHP))
 (test (> (abs ?cHP) 0.4))
 (fact (name "кузов SUV") (certainty ?cSUV))
@@ -1121,11 +1153,12 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cHP ?cSUV) 0.9) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "цена высокая, кузов SUV -> класс E (бизнес" " (класс E (бизнес " ?cnew ")"))))
+(assert (sendmessage (str-cat "цена высокая, кузов SUV -> класс E (бизнес"  " ((бизнес " ?cnew ")"))))
 
 
 
 (defrule rule71
+(declare (salience 7))
 (fact (name "привод полный") (certainty ?cAWD))
 (test (> (abs ?cAWD) 0.4))
 ?f <- (fact (name "класс J (внедорожники)") (certainty ?cf_))
@@ -1134,11 +1167,12 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cAWD) 1.0) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "привод полный -> класс J (внедорожники)" " (класс J (внедорожники) " ?cnew ")"))))
+(assert (sendmessage (str-cat "привод полный -> класс J (внедорожники)"  " ((внедорожники) " ?cnew ")"))))
 
 
 
 (defrule rule72
+(declare (salience 7))
 (fact (name "цена высокая") (certainty ?cHP))
 (test (> (abs ?cHP) 0.4))
 (fact (name "кузов купе") (certainty ?cCP))
@@ -1149,12 +1183,13 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cHP ?cCP) 1.0) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "цена высокая, кузов купе -> класс S (спорткары)" " (класс S (спорткары) " ?cnew ")"))))
+(assert (sendmessage (str-cat "цена высокая, кузов купе -> класс S (спорткары)"  " ((спорткары) " ?cnew ")"))))
 
 
 
 
 (defrule rule75
+(declare (salience 1))
 (fact (name "коробка передач МКПП") (certainty ?cMT))
 (test (> (abs ?cMT) 0.4))
 (fact (name "класс D (полноценный средний класс)") (certainty ?cD))
@@ -1167,11 +1202,12 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cMT ?cD ?cBU) 0.9) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "коробка передач МКПП, класс D (полноценный средний класс), кузов универсал -> VW Passat" " (VW Passat " ?cnew ")"))))
+(assert (sendmessage (str-cat "коробка передач МКПП, класс D (полноценный средний класс), кузов универсал -> VW Passat"  " (" ?cnew ")"))))
 
 
 
 (defrule rule76
+(declare (salience 1))
 (fact (name "коробка передач АКПП") (certainty ?cAT))
 (test (> (abs ?cAT) 0.4))
 (fact (name "класс D (полноценный средний класс)") (certainty ?cD))
@@ -1184,11 +1220,12 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cAT ?cD ?cBU) 0.9) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "коробка передач АКПП, класс D (полноценный средний класс), кузов универсал -> VW Passat" " (VW Passat " ?cnew ")"))))
+(assert (sendmessage (str-cat "коробка передач АКПП, класс D (полноценный средний класс), кузов универсал -> VW Passat"  " (" ?cnew ")"))))
 
 
 
 (defrule rule77
+(declare (salience 1))
 (fact (name "коробка передач АКПП") (certainty ?cAT))
 (test (> (abs ?cAT) 0.4))
 (fact (name "класс D (полноценный средний класс)") (certainty ?cD))
@@ -1201,11 +1238,12 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cAT ?cD ?cBS) 0.7) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "коробка передач АКПП, класс D (полноценный средний класс), кузов седан -> VW Passat" " (VW Passat " ?cnew ")"))))
+(assert (sendmessage (str-cat "коробка передач АКПП, класс D (полноценный средний класс), кузов седан -> VW Passat"  " (" ?cnew ")"))))
 
 
 
 (defrule rule78
+(declare (salience 1))
 (fact (name "коробка передач МКПП") (certainty ?cMT))
 (test (> (abs ?cMT) 0.4))
 (fact (name "класс D (полноценный средний класс)") (certainty ?cD))
@@ -1218,11 +1256,12 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cMT ?cD ?cBS) 0.7) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "коробка передач МКПП, класс D (полноценный средний класс), кузов седан -> VW Passat" " (VW Passat " ?cnew ")"))))
+(assert (sendmessage (str-cat "коробка передач МКПП, класс D (полноценный средний класс), кузов седан -> VW Passat"  " (" ?cnew ")"))))
 
 
 
 (defrule rule79
+(declare (salience 1))
 (fact (name "цена средняя") (certainty ?cMP))
 (test (> (abs ?cMP) 0.4))
 (fact (name "коробка передач МКПП") (certainty ?cMT))
@@ -1235,11 +1274,12 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cMP ?cMT ?cJ) 0.9) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "цена средняя, коробка передач МКПП, класс J (внедорожники) -> VW Tiguan" " (VW Tiguan " ?cnew ")"))))
+(assert (sendmessage (str-cat "цена средняя, коробка передач МКПП, класс J (внедорожники) -> VW Tiguan"  " (" ?cnew ")"))))
 
 
 
 (defrule rule80
+(declare (salience 1))
 (fact (name "коробка передач АКПП") (certainty ?cAT))
 (test (> (abs ?cAT) 0.4))
 (fact (name "класс J (внедорожники)") (certainty ?cJ))
@@ -1250,11 +1290,12 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cAT ?cJ) 0.9) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "коробка передач АКПП, класс J (внедорожники) -> VW Tiguan" " (VW Tiguan " ?cnew ")"))))
+(assert (sendmessage (str-cat "коробка передач АКПП, класс J (внедорожники) -> VW Tiguan"  " (" ?cnew ")"))))
 
 
 
 (defrule rule81
+(declare (salience 1))
 (fact (name "коробка передач АКПП") (certainty ?cAT))
 (test (> (abs ?cAT) 0.4))
 (fact (name "класс J (внедорожники)") (certainty ?cJ))
@@ -1265,11 +1306,12 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cAT ?cJ) 0.9) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "коробка передач АКПП, класс J (внедорожники) -> VW Tiguan" " (VW Tiguan " ?cnew ")"))))
+(assert (sendmessage (str-cat "коробка передач АКПП, класс J (внедорожники) -> VW Tiguan"  " (" ?cnew ")"))))
 
 
 
 (defrule rule82
+(declare (salience 1))
 (fact (name "коробка передач МКПП") (certainty ?cMT))
 (test (> (abs ?cMT) 0.4))
 (fact (name "класс C (низший средний класс или гольф") (certainty ?cC))
@@ -1282,11 +1324,12 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cMT ?cC ?cBH) 0.9) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "коробка передач МКПП, класс C (низший средний класс или гольф, кузов хетчбек -> VW Golf" " (VW Golf " ?cnew ")"))))
+(assert (sendmessage (str-cat "коробка передач МКПП, класс C (низший средний класс или гольф, кузов хетчбек -> VW Golf"  " (" ?cnew ")"))))
 
 
 
 (defrule rule83
+(declare (salience 1))
 (fact (name "коробка передач АКПП") (certainty ?cAT))
 (test (> (abs ?cAT) 0.4))
 (fact (name "класс C (низший средний класс или гольф") (certainty ?cC))
@@ -1299,11 +1342,12 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cAT ?cC ?cBH) 0.9) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "коробка передач АКПП, класс C (низший средний класс или гольф, кузов хетчбек -> VW Golf" " (VW Golf " ?cnew ")"))))
+(assert (sendmessage (str-cat "коробка передач АКПП, класс C (низший средний класс или гольф, кузов хетчбек -> VW Golf"  " (" ?cnew ")"))))
 
 
 
 (defrule rule84
+(declare (salience 1))
 (fact (name "коробка передач АКПП") (certainty ?cAT))
 (test (> (abs ?cAT) 0.4))
 (fact (name "класс J (внедорожники)") (certainty ?cJ))
@@ -1314,11 +1358,12 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cAT ?cJ) 0.8) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "коробка передач АКПП, класс J (внедорожники) -> VW Touareg" " (VW Touareg " ?cnew ")"))))
+(assert (sendmessage (str-cat "коробка передач АКПП, класс J (внедорожники) -> VW Touareg"  " (" ?cnew ")"))))
 
 
 
 (defrule rule85
+(declare (salience 1))
 (fact (name "коробка передач АКПП") (certainty ?cAT))
 (test (> (abs ?cAT) 0.4))
 (fact (name "класс E (бизнес") (certainty ?cE))
@@ -1336,6 +1381,7 @@
 
 
 (defrule rule86
+(declare (salience 1))
 (fact (name "коробка передач АКПП") (certainty ?cAT))
 (test (> (abs ?cAT) 0.4))
 (fact (name "класс S (спорткары)") (certainty ?cS))
@@ -1353,6 +1399,7 @@
 
 
 (defrule rule87
+(declare (salience 1))
 (fact (name "коробка передач МКПП") (certainty ?cMT))
 (test (> (abs ?cMT) 0.4))
 (fact (name "класс A (мини") (certainty ?cA))
@@ -1363,11 +1410,12 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cMT ?cA) 1.0) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "коробка передач МКПП, класс A (мини -> Daewoo Matiz" " (Daewoo Matiz " ?cnew ")"))))
+(assert (sendmessage (str-cat "коробка передач МКПП, класс A (мини -> Daewoo Matiz"  " (" ?cnew ")"))))
 
 
 
 (defrule rule88
+(declare (salience 1))
 (fact (name "коробка передач АКПП") (certainty ?cAT))
 (test (> (abs ?cAT) 0.4))
 (fact (name "класс A (мини") (certainty ?cA))
@@ -1378,11 +1426,12 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cAT ?cA) 1.0) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "коробка передач АКПП, класс A (мини -> Daewoo Matiz" " (Daewoo Matiz " ?cnew ")"))))
+(assert (sendmessage (str-cat "коробка передач АКПП, класс A (мини -> Daewoo Matiz"  " (" ?cnew ")"))))
 
 
 
 (defrule rule89
+(declare (salience 1))
 (fact (name "коробка передач МКПП") (certainty ?cMT))
 (test (> (abs ?cMT) 0.4))
 (fact (name "класс B (небольшие городские автомобили)") (certainty ?cB))
@@ -1395,11 +1444,12 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cMT ?cB ?cBS) 0.9) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "коробка передач МКПП, класс B (небольшие городские автомобили), кузов седан -> Hyundai Solaris" " (Hyundai Solaris " ?cnew ")"))))
+(assert (sendmessage (str-cat "коробка передач МКПП, класс B (небольшие городские автомобили), кузов седан -> Hyundai Solaris"  " (" ?cnew ")"))))
 
 
 
 (defrule rule90
+(declare (salience 1))
 (fact (name "коробка передач МКПП") (certainty ?cMT))
 (test (> (abs ?cMT) 0.4))
 (fact (name "класс B (небольшие городские автомобили)") (certainty ?cB))
@@ -1412,11 +1462,12 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cMT ?cB ?cBH) 0.8) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "коробка передач МКПП, класс B (небольшие городские автомобили), кузов хетчбек -> Hyundai Solaris" " (Hyundai Solaris " ?cnew ")"))))
+(assert (sendmessage (str-cat "коробка передач МКПП, класс B (небольшие городские автомобили), кузов хетчбек -> Hyundai Solaris"  " (" ?cnew ")"))))
 
 
 
 (defrule rule91
+(declare (salience 1))
 (fact (name "коробка передач АКПП") (certainty ?cAT))
 (test (> (abs ?cAT) 0.4))
 (fact (name "класс B (небольшие городские автомобили)") (certainty ?cB))
@@ -1429,11 +1480,12 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cAT ?cB ?cBH) 0.8) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "коробка передач АКПП, класс B (небольшие городские автомобили), кузов хетчбек -> Hyundai Solaris" " (Hyundai Solaris " ?cnew ")"))))
+(assert (sendmessage (str-cat "коробка передач АКПП, класс B (небольшие городские автомобили), кузов хетчбек -> Hyundai Solaris"  " (" ?cnew ")"))))
 
 
 
 (defrule rule92
+(declare (salience 1))
 (fact (name "коробка передач АКПП") (certainty ?cAT))
 (test (> (abs ?cAT) 0.4))
 (fact (name "класс B (небольшие городские автомобили)") (certainty ?cB))
@@ -1446,11 +1498,12 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cAT ?cB ?cBS) 0.9) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "коробка передач АКПП, класс B (небольшие городские автомобили), кузов седан -> Hyundai Solaris" " (Hyundai Solaris " ?cnew ")"))))
+(assert (sendmessage (str-cat "коробка передач АКПП, класс B (небольшие городские автомобили), кузов седан -> Hyundai Solaris"  " (" ?cnew ")"))))
 
 
 
 (defrule rule93
+(declare (salience 1))
 (fact (name "цена низкая") (certainty ?cLP))
 (test (> (abs ?cLP) 0.4))
 (fact (name "коробка передач МКПП") (certainty ?cMT))
@@ -1463,4 +1516,4 @@
 (retract ?tk)
 (bind ?cnew (combine (* (min ?cLP ?cMT ?cJ) 0.99) ?cf_))
 (modify ?f (certainty ?cnew))
-(assert (sendmessage (str-cat "цена низкая, коробка передач МКПП, класс J (внедорожники) -> Lada Niva" " (Lada Niva " ?cnew ")"))))
+(assert (sendmessage (str-cat "цена низкая, коробка передач МКПП, класс J (внедорожники) -> Lada Niva"  " (" ?cnew ")"))))
