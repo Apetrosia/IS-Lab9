@@ -32,6 +32,24 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.codeBox = new System.Windows.Forms.TextBox();
+            this.TNOcert = new System.Windows.Forms.NumericUpDown();
+            this.TNRcert = new System.Windows.Forms.NumericUpDown();
+            this.TNNcert = new System.Windows.Forms.NumericUpDown();
+            this.TCOcert = new System.Windows.Forms.NumericUpDown();
+            this.TCRcert = new System.Windows.Forms.NumericUpDown();
+            this.TCNcert = new System.Windows.Forms.NumericUpDown();
+            this.CGOcert = new System.Windows.Forms.NumericUpDown();
+            this.CGRcert = new System.Windows.Forms.NumericUpDown();
+            this.CGNcert = new System.Windows.Forms.NumericUpDown();
+            this.COcert = new System.Windows.Forms.NumericUpDown();
+            this.CMcert = new System.Windows.Forms.NumericUpDown();
+            this.CRcert = new System.Windows.Forms.NumericUpDown();
+            this.FSCcert = new System.Windows.Forms.NumericUpDown();
+            this.FSFcert = new System.Windows.Forms.NumericUpDown();
+            this.FSScert = new System.Windows.Forms.NumericUpDown();
+            this.TABcert = new System.Windows.Forms.NumericUpDown();
+            this.TAWcert = new System.Windows.Forms.NumericUpDown();
+            this.TAScert = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
             this.checkedListBox6 = new System.Windows.Forms.CheckedListBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -53,48 +71,30 @@
             this.clipsOpenFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.fontDialog1 = new System.Windows.Forms.FontDialog();
             this.clipsSaveFileDialog = new System.Windows.Forms.SaveFileDialog();
-            this.TAScert = new System.Windows.Forms.NumericUpDown();
-            this.TAWcert = new System.Windows.Forms.NumericUpDown();
-            this.TABcert = new System.Windows.Forms.NumericUpDown();
-            this.CGOcert = new System.Windows.Forms.NumericUpDown();
-            this.CGRcert = new System.Windows.Forms.NumericUpDown();
-            this.CGNcert = new System.Windows.Forms.NumericUpDown();
-            this.COcert = new System.Windows.Forms.NumericUpDown();
-            this.CMcert = new System.Windows.Forms.NumericUpDown();
-            this.CRcert = new System.Windows.Forms.NumericUpDown();
-            this.TNOcert = new System.Windows.Forms.NumericUpDown();
-            this.TNRcert = new System.Windows.Forms.NumericUpDown();
-            this.TNNcert = new System.Windows.Forms.NumericUpDown();
-            this.TCOcert = new System.Windows.Forms.NumericUpDown();
-            this.TCRcert = new System.Windows.Forms.NumericUpDown();
-            this.TCNcert = new System.Windows.Forms.NumericUpDown();
-            this.FSCcert = new System.Windows.Forms.NumericUpDown();
-            this.FSFcert = new System.Windows.Forms.NumericUpDown();
-            this.FSScert = new System.Windows.Forms.NumericUpDown();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TAScert)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TAWcert)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TABcert)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CGOcert)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CGRcert)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CGNcert)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.COcert)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CMcert)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CRcert)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TNOcert)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TNRcert)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TNNcert)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TCOcert)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TCRcert)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TCNcert)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CGOcert)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CGRcert)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CGNcert)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.COcert)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CMcert)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CRcert)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FSCcert)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FSFcert)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FSScert)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TABcert)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TAWcert)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TAScert)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -170,6 +170,448 @@
             this.codeBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.codeBox.Size = new System.Drawing.Size(693, 932);
             this.codeBox.TabIndex = 2;
+            // 
+            // TNOcert
+            // 
+            this.TNOcert.DecimalPlaces = 2;
+            this.TNOcert.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            131072});
+            this.TNOcert.Location = new System.Drawing.Point(596, 843);
+            this.TNOcert.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.TNOcert.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            -2147483648});
+            this.TNOcert.Name = "TNOcert";
+            this.TNOcert.Size = new System.Drawing.Size(120, 26);
+            this.TNOcert.TabIndex = 31;
+            // 
+            // TNRcert
+            // 
+            this.TNRcert.DecimalPlaces = 2;
+            this.TNRcert.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            131072});
+            this.TNRcert.Location = new System.Drawing.Point(596, 811);
+            this.TNRcert.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.TNRcert.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            -2147483648});
+            this.TNRcert.Name = "TNRcert";
+            this.TNRcert.Size = new System.Drawing.Size(120, 26);
+            this.TNRcert.TabIndex = 30;
+            // 
+            // TNNcert
+            // 
+            this.TNNcert.DecimalPlaces = 2;
+            this.TNNcert.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            131072});
+            this.TNNcert.Location = new System.Drawing.Point(596, 779);
+            this.TNNcert.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.TNNcert.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            -2147483648});
+            this.TNNcert.Name = "TNNcert";
+            this.TNNcert.Size = new System.Drawing.Size(120, 26);
+            this.TNNcert.TabIndex = 29;
+            this.TNNcert.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // TCOcert
+            // 
+            this.TCOcert.DecimalPlaces = 2;
+            this.TCOcert.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            131072});
+            this.TCOcert.Location = new System.Drawing.Point(222, 843);
+            this.TCOcert.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.TCOcert.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            -2147483648});
+            this.TCOcert.Name = "TCOcert";
+            this.TCOcert.Size = new System.Drawing.Size(120, 26);
+            this.TCOcert.TabIndex = 28;
+            // 
+            // TCRcert
+            // 
+            this.TCRcert.DecimalPlaces = 2;
+            this.TCRcert.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            131072});
+            this.TCRcert.Location = new System.Drawing.Point(222, 811);
+            this.TCRcert.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.TCRcert.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            -2147483648});
+            this.TCRcert.Name = "TCRcert";
+            this.TCRcert.Size = new System.Drawing.Size(120, 26);
+            this.TCRcert.TabIndex = 27;
+            // 
+            // TCNcert
+            // 
+            this.TCNcert.DecimalPlaces = 2;
+            this.TCNcert.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            131072});
+            this.TCNcert.Location = new System.Drawing.Point(222, 779);
+            this.TCNcert.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.TCNcert.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            -2147483648});
+            this.TCNcert.Name = "TCNcert";
+            this.TCNcert.Size = new System.Drawing.Size(120, 26);
+            this.TCNcert.TabIndex = 26;
+            this.TCNcert.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // CGOcert
+            // 
+            this.CGOcert.DecimalPlaces = 2;
+            this.CGOcert.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            131072});
+            this.CGOcert.Location = new System.Drawing.Point(596, 711);
+            this.CGOcert.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.CGOcert.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            -2147483648});
+            this.CGOcert.Name = "CGOcert";
+            this.CGOcert.Size = new System.Drawing.Size(120, 26);
+            this.CGOcert.TabIndex = 25;
+            // 
+            // CGRcert
+            // 
+            this.CGRcert.DecimalPlaces = 2;
+            this.CGRcert.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            131072});
+            this.CGRcert.Location = new System.Drawing.Point(596, 679);
+            this.CGRcert.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.CGRcert.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            -2147483648});
+            this.CGRcert.Name = "CGRcert";
+            this.CGRcert.Size = new System.Drawing.Size(120, 26);
+            this.CGRcert.TabIndex = 24;
+            // 
+            // CGNcert
+            // 
+            this.CGNcert.DecimalPlaces = 2;
+            this.CGNcert.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            131072});
+            this.CGNcert.Location = new System.Drawing.Point(596, 647);
+            this.CGNcert.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.CGNcert.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            -2147483648});
+            this.CGNcert.Name = "CGNcert";
+            this.CGNcert.Size = new System.Drawing.Size(120, 26);
+            this.CGNcert.TabIndex = 23;
+            this.CGNcert.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // COcert
+            // 
+            this.COcert.DecimalPlaces = 2;
+            this.COcert.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            131072});
+            this.COcert.Location = new System.Drawing.Point(222, 711);
+            this.COcert.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.COcert.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            -2147483648});
+            this.COcert.Name = "COcert";
+            this.COcert.Size = new System.Drawing.Size(120, 26);
+            this.COcert.TabIndex = 22;
+            // 
+            // CMcert
+            // 
+            this.CMcert.DecimalPlaces = 2;
+            this.CMcert.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            131072});
+            this.CMcert.Location = new System.Drawing.Point(222, 679);
+            this.CMcert.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.CMcert.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            -2147483648});
+            this.CMcert.Name = "CMcert";
+            this.CMcert.Size = new System.Drawing.Size(120, 26);
+            this.CMcert.TabIndex = 21;
+            // 
+            // CRcert
+            // 
+            this.CRcert.DecimalPlaces = 2;
+            this.CRcert.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            131072});
+            this.CRcert.Location = new System.Drawing.Point(222, 647);
+            this.CRcert.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.CRcert.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            -2147483648});
+            this.CRcert.Name = "CRcert";
+            this.CRcert.Size = new System.Drawing.Size(120, 26);
+            this.CRcert.TabIndex = 20;
+            this.CRcert.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // FSCcert
+            // 
+            this.FSCcert.DecimalPlaces = 2;
+            this.FSCcert.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            131072});
+            this.FSCcert.Location = new System.Drawing.Point(596, 578);
+            this.FSCcert.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.FSCcert.Name = "FSCcert";
+            this.FSCcert.ReadOnly = true;
+            this.FSCcert.Size = new System.Drawing.Size(120, 26);
+            this.FSCcert.TabIndex = 19;
+            this.FSCcert.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // FSFcert
+            // 
+            this.FSFcert.DecimalPlaces = 2;
+            this.FSFcert.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            131072});
+            this.FSFcert.Location = new System.Drawing.Point(596, 546);
+            this.FSFcert.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.FSFcert.Name = "FSFcert";
+            this.FSFcert.ReadOnly = true;
+            this.FSFcert.Size = new System.Drawing.Size(120, 26);
+            this.FSFcert.TabIndex = 18;
+            this.FSFcert.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // FSScert
+            // 
+            this.FSScert.DecimalPlaces = 2;
+            this.FSScert.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            131072});
+            this.FSScert.Location = new System.Drawing.Point(596, 514);
+            this.FSScert.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.FSScert.Name = "FSScert";
+            this.FSScert.ReadOnly = true;
+            this.FSScert.Size = new System.Drawing.Size(120, 26);
+            this.FSScert.TabIndex = 17;
+            this.FSScert.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // TABcert
+            // 
+            this.TABcert.DecimalPlaces = 2;
+            this.TABcert.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            131072});
+            this.TABcert.Location = new System.Drawing.Point(222, 578);
+            this.TABcert.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.TABcert.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            -2147483648});
+            this.TABcert.Name = "TABcert";
+            this.TABcert.Size = new System.Drawing.Size(120, 26);
+            this.TABcert.TabIndex = 16;
+            // 
+            // TAWcert
+            // 
+            this.TAWcert.DecimalPlaces = 2;
+            this.TAWcert.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            131072});
+            this.TAWcert.Location = new System.Drawing.Point(222, 546);
+            this.TAWcert.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.TAWcert.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            -2147483648});
+            this.TAWcert.Name = "TAWcert";
+            this.TAWcert.Size = new System.Drawing.Size(120, 26);
+            this.TAWcert.TabIndex = 15;
+            // 
+            // TAScert
+            // 
+            this.TAScert.DecimalPlaces = 2;
+            this.TAScert.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            131072});
+            this.TAScert.Location = new System.Drawing.Point(222, 514);
+            this.TAScert.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.TAScert.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            -2147483648});
+            this.TAScert.Name = "TAScert";
+            this.TAScert.Size = new System.Drawing.Size(120, 26);
+            this.TAScert.TabIndex = 14;
+            this.TAScert.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // label5
             // 
@@ -382,373 +824,6 @@
             this.clipsSaveFileDialog.Filter = "CLIPS files|*.clp|All files|*.*";
             this.clipsSaveFileDialog.Title = "Созранить файл как...";
             // 
-            // TAScert
-            // 
-            this.TAScert.DecimalPlaces = 2;
-            this.TAScert.Increment = new decimal(new int[] {
-            5,
-            0,
-            0,
-            131072});
-            this.TAScert.Location = new System.Drawing.Point(222, 514);
-            this.TAScert.Maximum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.TAScert.Name = "TAScert";
-            this.TAScert.Size = new System.Drawing.Size(120, 26);
-            this.TAScert.TabIndex = 14;
-            this.TAScert.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // TAWcert
-            // 
-            this.TAWcert.DecimalPlaces = 2;
-            this.TAWcert.Increment = new decimal(new int[] {
-            5,
-            0,
-            0,
-            131072});
-            this.TAWcert.Location = new System.Drawing.Point(222, 546);
-            this.TAWcert.Maximum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.TAWcert.Name = "TAWcert";
-            this.TAWcert.Size = new System.Drawing.Size(120, 26);
-            this.TAWcert.TabIndex = 15;
-            // 
-            // TABcert
-            // 
-            this.TABcert.DecimalPlaces = 2;
-            this.TABcert.Increment = new decimal(new int[] {
-            5,
-            0,
-            0,
-            131072});
-            this.TABcert.Location = new System.Drawing.Point(222, 578);
-            this.TABcert.Maximum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.TABcert.Name = "TABcert";
-            this.TABcert.Size = new System.Drawing.Size(120, 26);
-            this.TABcert.TabIndex = 16;
-            // 
-            // CGOcert
-            // 
-            this.CGOcert.DecimalPlaces = 2;
-            this.CGOcert.Increment = new decimal(new int[] {
-            5,
-            0,
-            0,
-            131072});
-            this.CGOcert.Location = new System.Drawing.Point(596, 711);
-            this.CGOcert.Maximum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.CGOcert.Name = "CGOcert";
-            this.CGOcert.Size = new System.Drawing.Size(120, 26);
-            this.CGOcert.TabIndex = 25;
-            // 
-            // CGRcert
-            // 
-            this.CGRcert.DecimalPlaces = 2;
-            this.CGRcert.Increment = new decimal(new int[] {
-            5,
-            0,
-            0,
-            131072});
-            this.CGRcert.Location = new System.Drawing.Point(596, 679);
-            this.CGRcert.Maximum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.CGRcert.Name = "CGRcert";
-            this.CGRcert.Size = new System.Drawing.Size(120, 26);
-            this.CGRcert.TabIndex = 24;
-            // 
-            // CGNcert
-            // 
-            this.CGNcert.DecimalPlaces = 2;
-            this.CGNcert.Increment = new decimal(new int[] {
-            5,
-            0,
-            0,
-            131072});
-            this.CGNcert.Location = new System.Drawing.Point(596, 647);
-            this.CGNcert.Maximum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.CGNcert.Name = "CGNcert";
-            this.CGNcert.Size = new System.Drawing.Size(120, 26);
-            this.CGNcert.TabIndex = 23;
-            this.CGNcert.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // COcert
-            // 
-            this.COcert.DecimalPlaces = 2;
-            this.COcert.Increment = new decimal(new int[] {
-            5,
-            0,
-            0,
-            131072});
-            this.COcert.Location = new System.Drawing.Point(222, 711);
-            this.COcert.Maximum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.COcert.Name = "COcert";
-            this.COcert.Size = new System.Drawing.Size(120, 26);
-            this.COcert.TabIndex = 22;
-            // 
-            // CMcert
-            // 
-            this.CMcert.DecimalPlaces = 2;
-            this.CMcert.Increment = new decimal(new int[] {
-            5,
-            0,
-            0,
-            131072});
-            this.CMcert.Location = new System.Drawing.Point(222, 679);
-            this.CMcert.Maximum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.CMcert.Name = "CMcert";
-            this.CMcert.Size = new System.Drawing.Size(120, 26);
-            this.CMcert.TabIndex = 21;
-            // 
-            // CRcert
-            // 
-            this.CRcert.DecimalPlaces = 2;
-            this.CRcert.Increment = new decimal(new int[] {
-            5,
-            0,
-            0,
-            131072});
-            this.CRcert.Location = new System.Drawing.Point(222, 647);
-            this.CRcert.Maximum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.CRcert.Name = "CRcert";
-            this.CRcert.Size = new System.Drawing.Size(120, 26);
-            this.CRcert.TabIndex = 20;
-            this.CRcert.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // TNOcert
-            // 
-            this.TNOcert.DecimalPlaces = 2;
-            this.TNOcert.Increment = new decimal(new int[] {
-            5,
-            0,
-            0,
-            131072});
-            this.TNOcert.Location = new System.Drawing.Point(596, 843);
-            this.TNOcert.Maximum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.TNOcert.Name = "TNOcert";
-            this.TNOcert.Size = new System.Drawing.Size(120, 26);
-            this.TNOcert.TabIndex = 31;
-            // 
-            // TNRcert
-            // 
-            this.TNRcert.DecimalPlaces = 2;
-            this.TNRcert.Increment = new decimal(new int[] {
-            5,
-            0,
-            0,
-            131072});
-            this.TNRcert.Location = new System.Drawing.Point(596, 811);
-            this.TNRcert.Maximum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.TNRcert.Name = "TNRcert";
-            this.TNRcert.Size = new System.Drawing.Size(120, 26);
-            this.TNRcert.TabIndex = 30;
-            // 
-            // TNNcert
-            // 
-            this.TNNcert.DecimalPlaces = 2;
-            this.TNNcert.Increment = new decimal(new int[] {
-            5,
-            0,
-            0,
-            131072});
-            this.TNNcert.Location = new System.Drawing.Point(596, 779);
-            this.TNNcert.Maximum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.TNNcert.Name = "TNNcert";
-            this.TNNcert.Size = new System.Drawing.Size(120, 26);
-            this.TNNcert.TabIndex = 29;
-            this.TNNcert.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // TCOcert
-            // 
-            this.TCOcert.DecimalPlaces = 2;
-            this.TCOcert.Increment = new decimal(new int[] {
-            5,
-            0,
-            0,
-            131072});
-            this.TCOcert.Location = new System.Drawing.Point(222, 843);
-            this.TCOcert.Maximum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.TCOcert.Name = "TCOcert";
-            this.TCOcert.Size = new System.Drawing.Size(120, 26);
-            this.TCOcert.TabIndex = 28;
-            // 
-            // TCRcert
-            // 
-            this.TCRcert.DecimalPlaces = 2;
-            this.TCRcert.Increment = new decimal(new int[] {
-            5,
-            0,
-            0,
-            131072});
-            this.TCRcert.Location = new System.Drawing.Point(222, 811);
-            this.TCRcert.Maximum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.TCRcert.Name = "TCRcert";
-            this.TCRcert.Size = new System.Drawing.Size(120, 26);
-            this.TCRcert.TabIndex = 27;
-            // 
-            // TCNcert
-            // 
-            this.TCNcert.DecimalPlaces = 2;
-            this.TCNcert.Increment = new decimal(new int[] {
-            5,
-            0,
-            0,
-            131072});
-            this.TCNcert.Location = new System.Drawing.Point(222, 779);
-            this.TCNcert.Maximum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.TCNcert.Name = "TCNcert";
-            this.TCNcert.Size = new System.Drawing.Size(120, 26);
-            this.TCNcert.TabIndex = 26;
-            this.TCNcert.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // FSCcert
-            // 
-            this.FSCcert.DecimalPlaces = 2;
-            this.FSCcert.Increment = new decimal(new int[] {
-            5,
-            0,
-            0,
-            131072});
-            this.FSCcert.Location = new System.Drawing.Point(596, 578);
-            this.FSCcert.Maximum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.FSCcert.Name = "FSCcert";
-            this.FSCcert.ReadOnly = true;
-            this.FSCcert.Size = new System.Drawing.Size(120, 26);
-            this.FSCcert.TabIndex = 19;
-            this.FSCcert.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // FSFcert
-            // 
-            this.FSFcert.DecimalPlaces = 2;
-            this.FSFcert.Increment = new decimal(new int[] {
-            5,
-            0,
-            0,
-            131072});
-            this.FSFcert.Location = new System.Drawing.Point(596, 546);
-            this.FSFcert.Maximum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.FSFcert.Name = "FSFcert";
-            this.FSFcert.ReadOnly = true;
-            this.FSFcert.Size = new System.Drawing.Size(120, 26);
-            this.FSFcert.TabIndex = 18;
-            this.FSFcert.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // FSScert
-            // 
-            this.FSScert.DecimalPlaces = 2;
-            this.FSScert.Increment = new decimal(new int[] {
-            5,
-            0,
-            0,
-            131072});
-            this.FSScert.Location = new System.Drawing.Point(596, 514);
-            this.FSScert.Maximum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.FSScert.Name = "FSScert";
-            this.FSScert.ReadOnly = true;
-            this.FSScert.Size = new System.Drawing.Size(120, 26);
-            this.FSScert.TabIndex = 17;
-            this.FSScert.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
             // ClipsFormsExample
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -768,25 +843,25 @@
             this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.TAScert)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TAWcert)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TABcert)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CGOcert)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CGRcert)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CGNcert)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.COcert)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CMcert)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CRcert)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TNOcert)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TNRcert)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TNNcert)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TCOcert)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TCRcert)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TCNcert)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CGOcert)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CGRcert)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CGNcert)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.COcert)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CMcert)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CRcert)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FSCcert)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FSFcert)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FSScert)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TABcert)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TAWcert)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TAScert)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
